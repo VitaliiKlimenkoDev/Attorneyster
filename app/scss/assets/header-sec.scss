@@ -1,0 +1,23 @@
+.header-sec {
+    background-color: $Main-blue;
+    position: relative;
+
+    &__wrapper {
+        padding-bottom: rem(150px);
+    }
+    &__bg-image {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+    }
+    &__tittle {
+        display: flex;
+        justify-content: center;
+        margin-top: rem(120px);
+        position: relative;
+
+        @include christ(21px);
+    }
+}

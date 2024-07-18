@@ -1,0 +1,150 @@
+.attorneys__wrapper {
+    padding: rem(178px) 0 rem(200px) 0;
+}
+
+.attorneys__head-text {
+    text-align: center;
+    color: #161D27;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    max-width: rem(676px);
+    margin: 0 auto rem(122px) auto;
+    
+    @include christ(8px);
+    @media (max-width: 411px) {
+        font-size: 1.845455rem;
+        max-width: 25.727273rem;
+    }
+}
+
+.attorneys__lawyers-block {
+    display: flex;
+    justify-content: space-between;
+
+    @media (max-width: 601px) {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &-single {
+        display: flex;
+        justify-content: center;
+        position: relative;
+        width: calc(448 / 1400 * 100%);
+
+        @media (max-width: 601px) {
+            width: 230px;
+            margin-top: rem(130px);
+        }
+
+        &:first-child {
+            @media (max-width: 601px) {
+                margin-top: 0;
+            }
+        }
+        &-img {
+            width: 100%;
+        }
+
+        &-desc-block {
+            display: flex;
+            flex-direction: column;
+            padding: rem(21px) rem(32px);
+            background-color: #fff;
+            position: absolute;
+            top: calc(532 / 593 * 100%);
+    
+            &-social-block {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding-bottom: rem(21px);
+                margin-bottom: rem(22px);
+                position: relative;
+    
+                &::after {
+                    content: "";
+                    display: block;
+                    width: rem(95px);
+                    height: rem(1px);
+                    background-color: $Main-orange;
+                    position: absolute;
+                    bottom: 0;
+                }
+                .attorneys__lawyers-block-single-desc-block-social-link {
+                    display: inline-flex;
+                    width: rem(20px);
+                    height: rem(19px);
+                    margin-right: rem(26px);
+
+                    @media (max-width: 1920px) {
+                        width: 20px;
+                        height: 19px;
+                    }
+    
+                    &:nth-child(3) {
+                        width: rem(21px);
+                        height: rem(17px);
+
+                        @media (max-width: 1920px) {
+                            width: 21px;
+                            height: 17px;
+                        }
+                    }
+                    &:last-child {
+                        margin: 0;
+                        width: rem(20px);
+                        height: rem(20px);
+
+                        @media (max-width: 1920px) {
+                            width: 20px;
+                            height: 20px;
+                        }
+                    }
+                    .attorneys__lawyers-block-single-desc-block-social-img {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+            }
+
+            &-text-block {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                .attorneys__lawyers-block-single-desc-block-text-head {
+                    color: #1C1C1C;
+                }
+                .attorneys__lawyers-block-single-desc-block-text-desc {
+                    color: $Main-orange;
+                    line-height: 140%;
+                }
+            }
+        }
+    }
+}
+
+.attorneys__meet-link {
+    display: block;
+    margin: rem(143px) auto 0 auto;
+    padding: rem(28px) rem(72px);
+    border: rem(1px) solid $Main-blue;
+    color: #1F2732;
+    font-size: rem(22px);
+    font-family: Outfit;
+    font-weight: 500;
+    max-width: rem(285px);
+    transition: $transition;
+
+    @media (max-width: 701px) {
+        margin-top: 8.5rem;
+    }
+    @media (hover) {
+        &:hover {
+            background-color: $Main-blue;
+            color: #fff;
+        }
+    }
+}

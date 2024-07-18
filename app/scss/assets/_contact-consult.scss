@@ -1,0 +1,124 @@
+.contact-consult {
+    background-color: $Main-blue;
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        padding: rem(200px) 0;
+
+        @media (max-width: 721px) {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+    }
+}
+
+.contact-consult__contact-us {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    @media (max-width: 721px) {
+        align-items: center;
+        margin-bottom: 31px;
+    }
+
+    .contact-consult__text-head {
+        max-width: rem(597px);
+
+        @media (max-width: 721px) {
+            max-width: 38.136364rem;
+        }
+        @media (max-width: 401px) {
+            font-size: 1.7545455rem;
+        }
+    }
+    .contact-consult__text-desc {
+        max-width: rem(549px);
+        margin: rem(23px) 0 rem(33px) 0;
+    }
+    .contact-consult__contact-link {
+        padding: rem(28px) rem(88px);
+    }
+}
+
+
+.contact-consult__consultation {
+    background-color: #fff;
+    padding: calc(40 / 1400 * 100%);
+    width: calc(672 / 1400 * 100%);
+
+    @media (max-width: 771px) {
+        padding: 2.557143%;
+        width: 47%;
+    }
+    @media (max-width: 721px) {
+        width: 351px;
+        padding: 3.557143%;
+    }
+    @media (max-width: 401px) {
+        width: 100%;
+        padding: 5.557143%;
+    }
+
+    &-block {
+        background-color: #fff;
+        border: rem(14px) solid #DFDFDF;
+        padding: rem(54px) rem(34px);
+
+        @media (max-width: 771px) {
+            padding: 1.454545rem 1.045455rem;
+        }
+
+        .contact-consult__consultation-text-head {
+            color: #161D27;
+
+            @media (max-width: 401px) {
+                font-size: 1.8545455rem;
+            }
+        }
+        .contact-consult__consultation-text-desc {
+            margin: rem(16px) 0 rem(36px) 0;
+            max-width: rem(494px);
+        }
+        .contact-consult__consultation-tel-block {
+            display: flex;
+
+            @media (max-width: 401px) {
+                justify-content: center;
+            }
+
+            &-link {
+                display: inline-flex;
+                width: rem(70px);
+                height: rem(70px);
+                margin-right: rem(12px);
+
+                .contact-consult__consultation-tel-block-img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            &-text {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-start;
+
+                &-head {
+                    color: $Main-blue;
+                    font-size: rem(18px);
+                    font-family: Outfit;
+                    font-weight: 500;
+                }
+                &-and-link {
+                    color: $Second-blue;
+                    font-size: rem(30px);
+                    font-family: Outfit;
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+}
