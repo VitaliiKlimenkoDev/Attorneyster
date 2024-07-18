@@ -1,0 +1,188 @@
+@import './blocks';
+@import './assets/header-sec.scss';
+@import './assets/text-content';
+@import './assets/meet-partners';
+
+
+.main-content {
+    background-color: $Main-blue;
+
+    &__wrapper {
+        padding: rem(200px) 0;
+    }
+    &__bg-image {
+        width: 100%;
+        margin-bottom: rem(60px);
+    }
+    &__case {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+
+        @media (max-width: 769px) {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+    
+    &__text-content {
+        max-width: rem(800px);
+
+        @media (max-width: 769px) {
+            max-width: 100%;
+        }
+    }
+    &__desc {
+        margin: rem(16px) 0 rem(40px) 0;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+
+.main-content__details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: rem(35px);
+
+    @media (max-width: 769px) {
+        margin: rem(65px) 0 0 0;
+    }
+
+    &-desc-block {
+        display: flex;
+        flex-direction: column;
+        background-color: #fff;
+        padding: rem(54px);
+        width: rem(541px);
+
+        @media (max-width: 769px) {
+            width: 32.590909rem;
+        }
+        @media (max-width: 451px) {
+            width: 100%;
+        }
+
+        &-tittle {
+            color: $Main-blue;
+            margin-bottom: rem(27px);
+        }
+        &-spec-block {
+            padding-bottom: rem(24px);
+            margin-bottom: rem(15px);
+            border-bottom: rem(1px) solid #CACACA;
+
+            &-tittle {
+                color: $Main-blue;
+                margin-bottom: rem(5px);
+            }
+            &_last {
+                margin-bottom: 0;
+            }
+        }
+        &-result {
+            margin-top: rem(62px);
+            background-color: $Main-orange;
+            padding: rem(20px);
+
+            &-border {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                border: rem(1px) solid #000;
+                padding: rem(29px) 0 rem(29px) rem(87px);
+            }
+            &-tittle {
+                color: $Main-blue;
+                margin-bottom: rem(8px);
+            }
+            &-price {
+                color: $Main-blue;
+                font-size: rem(45px);
+                font-weight: 700;
+                line-height: 114.6%;
+            }
+        }
+    }
+
+    &-single {
+        position: relative;
+        width: rem(541px);
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        margin-top: rem(30px);
+
+        @media (max-width: 361px) {
+            width: 100%;
+        }
+
+        &:last-child {
+            padding: rem(80px) rem(62px);
+            background-color: $Main-orange;
+
+            .main-content__details-single-tittle, .main-content__details-single-caption, .main-content__details-single-desc {
+                color: $Main-blue;
+            }
+            .main-content__details-view-link {
+                padding: rem(28px) rem(59px);
+                background-color: $Main-blue;
+                color: #fff;
+                margin-top: rem(20px);
+                transition: $transition;
+
+                @media (hover) {
+                    &:hover {
+                        background-color: $Second-blue;
+                        color: $Second-orange;
+                    }
+                }
+            }
+        }
+
+        &-sub-block {
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: rem(80px) rem(62px);
+        }
+
+        &-bg-img {
+            width: 100%;
+        }
+        &-tittle {
+            color: #FFF;
+            font-size: rem(45px);
+            font-weight: 700;
+        }
+        &-caption {
+            color: #D1B06B;
+            font-size: rem(22px);
+            font-weight: 600;
+            line-height: 140%;
+            margin: rem(20px) 0 rem(15px) 0;
+        }
+        .main-content__details-about-link {
+            padding: rem(28px) rem(95px);
+            margin-top: rem(20px);
+        }
+    }
+}
+
+
+.main-content__bg-figure {
+    margin: rem(40px) 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .main-content__bg-img {
+        width: 100%;
+        margin-bottom: rem(13px);
+    }
+}

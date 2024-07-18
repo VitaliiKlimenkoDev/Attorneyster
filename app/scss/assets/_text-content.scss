@@ -1,0 +1,40 @@
+.text-content {
+    background-color: $Main-blue;
+
+    &__wrapper {
+        padding: rem(200px) 0 rem(122px) 0;
+    }
+
+    &__main-tittle {
+        &:nth-child(2) {
+            margin: rem(71px) 0 rem(29px) 0;
+        }
+        &:nth-child(4) {
+            margin: rem(41px) 0 rem(29px) 0;
+        }
+        &:nth-child(10) {
+            margin: rem(41px) 0;
+        }
+    }
+    &__ul-list {
+        margin: rem(36px) 0 rem(56px) 0;
+        
+        .buisness-law__list-item {
+            list-style-type: disc;
+        }
+    }
+    &__desc {
+        &:nth-child(8) {
+            margin: rem(13px) 0 rem(42px) 0;
+        }
+    }
+
+    &__ol-list {
+        .buisness-law__list-item {
+            list-style-type: decimal;
+        }
+    }
+}
+.text-content__bg-image {
+    width: 100%;
+}

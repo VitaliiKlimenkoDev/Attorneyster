@@ -1,0 +1,87 @@
+.meet-partners {
+    display: flex;
+    flex-direction: column;
+
+    &__head-text {
+        display: flex;
+        align-items: center;
+        color: $Second-blue;
+        position: relative;
+        max-width: rem(428px);
+        margin: 0 auto rem(65px) auto;
+
+        &::after {
+            content: "";
+            display: block;
+            background: url('https://res.cloudinary.com/ducmdk54f/image/upload/q_auto/v1/Attornyster/brands/k3dnfmfsl1ybshm16ixs') no-repeat;
+            background-size: 100%;
+            width: rem(95px);
+            height: rem(44px);
+            position: absolute;
+            right: 100%;
+            margin-right: calc(16 / 428 * 100%);
+        }
+        &::before {
+            content: "";
+            display: block;
+            background: url('https://res.cloudinary.com/ducmdk54f/image/upload/q_auto/v1/Attornyster/brands/k3dnfmfsl1ybshm16ixs') no-repeat;
+            background-size: 100%;
+            width: rem(95px);
+            height: rem(44px);
+            position: absolute;
+            left: 100%;
+            margin-left: calc(16 / 428 * 100%);
+        }
+    }
+
+    &__brands-block {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+
+        @supports (column-gap: 1px) and (row-gap: 1px) {
+            row-gap: 2rem;
+        }
+        @media (max-width: 531px) {
+            padding: 0 50px;
+        }
+        @media (max-width: 446px) {
+            padding: 0;
+        }
+
+        .meet-partners__brands-img {
+            margin-right: rem(113px);
+
+            @media (max-width: 731px) {
+                margin-right: 2.136364rem;
+            }
+
+            &:nth-child(1) {
+                width: rem(137px);
+                height: rem(44px);
+
+                @media (max-width: 329px) {
+                    margin-left: 2.136364rem;
+                }
+            }
+            &:nth-child(2) {
+                width: rem(106px);
+                height: rem(106px);
+            }
+            &:nth-child(3) {
+                width: rem(170px);
+                height: rem(44px);
+            }
+            &:nth-child(4) {
+                width: rem(151px);
+                height: rem(46px);
+            }
+            &:last-child {
+                margin-right: 0;
+                width: rem(122px);
+                height: rem(49px);
+            }
+        }
+    }
+}

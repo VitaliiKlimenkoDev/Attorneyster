@@ -1,0 +1,254 @@
+@import './blocks';
+@import './assets/header-sec.scss';
+@import './assets/faq';
+
+
+.contacts {
+    background-color: $Main-blue;
+
+    &__wrapper {
+        padding: rem(169px) 0 rem(325px) 0;
+    }
+}
+.contacts__text {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: rem(118px);
+
+    @media (max-width: 601px) {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    &-single {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        @media (max-width: 601px) {
+            align-items: center;
+        }
+
+        &-head {
+            color: $Main-orange;
+            font-size: rem(30px);
+            font-family: Cormorant Garamond;
+            font-weight: 700;
+            line-height: 114.6%;
+            margin-bottom: rem(17px);
+        }
+        &-desc {
+            max-width: rem(537px);
+
+            @media (max-width: 769px) {
+                max-width: 17.409091rem;
+            }
+            @media (max-width: 601px) {
+                max-width: 26.409091rem;
+            }
+        }
+        &-addrr {
+            max-width: rem(303px);
+            font-style: normal;
+
+            @media (max-width: 769px) {
+                max-width: 9.772727rem;
+            }
+            @media (max-width: 601px) {
+                max-width: 21.409091rem;
+            }
+
+            &-tel {
+                font-weight: 700;
+            }
+        }
+    }
+    &-divider {
+        background: #3A4553;
+        height: rem(176px);
+        width: rem(1px);
+
+        @media (max-width: 601px) {
+            width: 26.409091rem;
+            height: rem(1px);
+            margin: rem(25px) 0;
+        }
+        @media (max-width: 361px) {
+            width: 100%;
+        }
+    }
+}
+
+
+.contacts__message {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    background-color: $Second-blue;
+    padding: rem(102px) rem(99px);
+    margin-bottom: rem(31px);
+
+    @media (max-width: 801px) {
+        padding: 4.6363636364rem 2.5rem;
+    }
+    @media (max-width: 701px) {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    @media (max-width: 451px) {
+        align-items: center;
+        padding: 3.636364rem 1.5rem;
+    }
+
+    &-inputs {
+        display: flex;
+        flex-direction: column;
+        width: rem(569px);
+        margin-right: rem(25px);
+
+        @media (max-width: 701px) {
+            margin: 0 0 rem(45px) 0;
+        }
+        @media (max-width: 451px) {
+            width: 100%;
+        }
+
+        &-inp {
+            width: 100%;
+            height: rem(45px);
+            padding-bottom: rem(13px);
+            border-bottom: rem(1px) solid #3A4553;
+            margin-top: rem(56px);
+
+            &:first-child {
+                margin-top: 0;
+            }
+        }
+    }
+    &-textarea-block {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: rem(543px);
+
+        @media (max-width: 451px) {
+            align-items: center;
+            width: 100%;
+        }
+
+        &-text {
+            resize: none;
+            width: 100%;
+            height: rem(193px);
+            padding: rem(24px) 0 0 rem(25px);
+            border: rem(1px) solid $Second-orange;
+            margin-bottom: rem(29px);
+        }
+    }
+}
+
+
+.contacts__links {
+    display: flex;
+    justify-content: space-between;
+
+    @media (max-width: 701px) {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &-f-sub-block {
+        background-color: $Second-blue;
+        display: flex;
+        padding: rem(42px) rem(67px);
+        margin-right: rem(20px);
+
+        @media (max-width: 701px) {
+            margin: 0 0 rem(20px) 0;
+        }
+        @media (max-width: 451px) {
+            width: 100%;
+            padding: 1.9090909091rem 0;
+            justify-content: center;
+        }
+
+        &-contact {
+            display: flex;
+            align-items: center;
+            margin-right: rem(70px);
+
+            @media (max-width: 451px) {
+                margin-right: 1.181818rem;
+            }
+        }
+    }
+    .contacts__links-sub-block-contact-link {
+        width: rem(62px);
+        height: rem(62px);
+        margin-right: rem(12px);
+
+        svg {
+            width: 100%;
+            height: 100%;
+        }
+    }
+    .contacts__links-sub-block-contact-text {
+        display: flex;
+        flex-direction: column;
+
+        .contacts__links-f-sub-block-contact-text-head {
+            color: $Main-orange;
+            font-size: rem(18px);
+            font-weight: 500;
+            text-transform: capitalize;
+        }
+    }
+    .contacts__links-f-sub-block-contact-text-link {
+        color: #FFF;
+        font-size: rem(22px);
+    }
+
+    .contacts__links-sub-block-contact {
+        display: flex;
+        align-items: center;
+    }
+
+
+    &-s-sub-block {
+        display: flex;
+        align-items: center;
+        background-color: $Second-blue;
+        padding: rem(42px) rem(151px) rem(42px) rem(44px);
+
+        @media (max-width: 801px) {
+            padding: 1.9090909091rem 1.863636rem;
+        }
+        @media (max-width: 701px) {
+            padding: 1.9090909091rem 4.363636rem;
+        }
+        @media (max-width: 451px) {
+            width: 100%;
+            padding-left: 0;
+            padding-right: 0;
+            justify-content: center;
+        }
+
+        .contacts__links-s-sub-block-contact-svg {
+            width: rem(62px);
+            height: rem(62px);
+            margin-right: rem(12px);
+        }
+        .contacts__links-sub-block-contact-text-head {
+            color: $Main-orange;
+            font-size: rem(18px);
+            font-weight: 500;
+            text-transform: capitalize;
+        }
+        .contacts__links-s-sub-block-contact-text-addrr {
+            color: #FFF;
+            font-size: rem(22px);
+            font-style: normal;
+        }
+    }
+}

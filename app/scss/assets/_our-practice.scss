@@ -1,0 +1,197 @@
+.our-practice {
+    background-color: $Second-blue;
+
+    &__wrapper {
+        padding: rem(185px) 0;
+
+        @media (max-width: 401px) {
+            padding: 5.409091rem 0;
+        }
+    }
+}
+
+.our-practice__text-block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: rem(63px);
+
+    @media (max-width: 591px) {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    @media (max-width: 501px) {
+        align-items: center;
+        text-align: center;
+    }
+
+    .our-practice__head-text {
+        max-width: rem(360px);
+        padding-bottom: rem(52px);
+        position: relative;
+
+        @media (max-width: 501px) {
+            padding: 0;
+        }
+
+        &::after {
+            content: "";
+            display: block;
+            width: rem(95px);
+            height: rem(44px);
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            background: url('https://res.cloudinary.com/ducmdk54f/image/upload/f_auto,q_auto/v1/Attornyster/flqzj34qwet5pxb6dlhf') no-repeat;
+            background-size: 100%;
+    
+            @media (max-width: 501px) {
+                display: none;
+            }
+        }
+    }
+    .our-practice__text-divider {
+        height: rem(105px);
+        width: rem(1px);
+        background-color: #3A4553;
+
+        @media (max-width: 591px) {
+            height: 1px;
+            width: 23.863636rem;
+            margin: 20px 0 15px 0;
+        }
+        @media (max-width: 501px) {
+            width: 12.863636rem;
+        }
+    }
+    .our-practice__descrip-text {
+        max-width: rem(745px);
+
+        @media (max-width: 785px) {
+            max-width: 27.863636rem;
+        }
+        @media (max-width: 681px) {
+            max-width: 23.863636rem;
+        }
+
+        .our-practice__text-highlight {
+            color: $Main-orange;
+        }
+    }
+}
+
+.our-practice__examples-block {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    @supports (column-gap: 1px) and (row-gap: 1px) {
+        justify-content: center;
+        column-gap: calc(28 / 1400 * 100%);
+        row-gap: rem(26px);
+    }
+
+    @media (max-width: 1901px) {
+        justify-content: center;
+    }
+    @media (max-width: 501px) {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .our-practice__single-example-block {
+        display: flex;
+        flex-direction: column;
+        padding: calc(58 / 1400 * 100%) calc(49 / 1400 * 100%);
+        background: $Main-blue;
+
+        @media (max-width: 1916px) {
+            padding: 3.1428571429% 3%;
+        }
+        
+        @supports not ((column-gap: 1px) and (row-gap: 1px)) {
+            &:nth-child(n + 4) {
+                margin-top: calc(26 / 1400 * 100%);
+            }
+            &:nth-child(n + 3) {
+                @media (max-width: 686px) {
+                    margin-top: 1.8571428571%;
+                }
+            }
+            @media (max-width: 501px) {
+                margin-top: 1.1818181818rem;
+            }
+            &:first-child {
+                @media (max-width: 501px) {
+                    margin-top: 0;
+                }
+            }
+        }
+
+        .our-practice__single-example-text-block {
+            display: flex;
+            flex-direction: column;
+            padding-bottom: rem(34px);
+            border-bottom: rem(1px) solid #3A4553;
+
+            .our-practice__single-example-desc-text {
+                max-width: rem(345px);
+                margin-top: rem(8px);
+
+                @media (max-width: 1916px) {
+                    max-width: 13.681818rem;
+                }
+            }
+        }
+
+        &:nth-child(1) > .our-practice__single-example-learn-block > img {
+            width: rem(55px);
+            height: rem(48px);
+        }
+        &:nth-child(2) > .our-practice__single-example-learn-block > img {
+            width: rem(63px);
+            height: rem(55px);
+        }
+        &:nth-child(3) > .our-practice__single-example-learn-block > img {
+            width: rem(70px);
+            height: rem(47px);
+        }
+        &:nth-child(4) > .our-practice__single-example-learn-block > img {
+            width: rem(53px);
+            height: rem(64px);
+        }
+        &:nth-child(5) > .our-practice__single-example-learn-block > img {
+            width: rem(53px);
+            height: rem(55px);
+        }
+        &:nth-child(6) > .our-practice__single-example-learn-block > img {
+            width: rem(56px);
+            height: rem(41px);
+        }
+
+        .our-practice__single-example-learn-block {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: rem(34px);
+
+            .our-practice__single-example-learn-link {
+                padding: rem(15px) rem(38px);
+                background-color: $Second-blue;
+                color: #FFF;
+                font-size: rem(20px);
+                font-family: Outfit;
+                font-weight: 500;
+                text-transform: capitalize;
+                transition: $transition;
+
+                @media (hover) {
+                    &:hover {
+                        background-color: $Main-orange;
+                        color: $Second-blue;
+                    }
+                }
+            }
+        }
+    }
+}

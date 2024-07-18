@@ -1,0 +1,606 @@
+@import './assets/normalize';
+@import './assets/nav';
+
+
+.container {
+    position: relative;
+    max-width: calc(1400 / 1920 * 100%);
+    margin: 0 auto;
+    @media (max-width: 1601px) {
+        & {
+            max-width: 80.916667%;
+        }
+    }
+    @media (max-width: 1441px) {
+        & {
+            max-width: 87.916667%; 
+        }
+    }
+    @media (max-width: 1201px) {
+        & {
+            max-width: 91.916667%;
+        }
+    }
+}
+
+
+@mixin christ($margin-top) {
+    &::after {
+        content: "";
+        display: block;
+        background: url('https://res.cloudinary.com/ducmdk54f/image/upload/q_auto/v1/Attornyster/brands/k3dnfmfsl1ybshm16ixs') no-repeat;
+        background-size: 100%;
+        width: rem(95px);
+        height: rem(44px);
+        position: absolute;
+        top: 100%;
+        margin-top: rem($margin-top);
+    }
+}
+
+
+.main-tittle {
+    font-family: 'Cormorant Garamond', sans-serif;
+    font-weight: 700;
+    font-size: rem(65px);
+    line-height: calc(74 / 65 * 100%);
+    color: #fff;
+}
+.third-tittle {
+    font-family: 'Cormorant Garamond', sans-serif;
+    font-weight: 700;
+    font-size: rem(45px);
+    line-height: 114.6%;
+    color: #fff;
+}
+.fourth-tittle {
+    font-family: 'Cormorant Garamond', sans-serif;
+    font-weight: 700;
+    font-size: rem(40px);
+    line-height: 114.6%;
+    color: #fff;
+}
+.fifth-tittle {
+    font-family: 'Cormorant Garamond', sans-serif;
+    font-weight: 700;
+    font-size: rem(35px);
+    line-height: 114.6%;
+    color: #fff;
+}
+.sixth-tittle {
+    font-family: 'Cormorant Garamond', sans-serif;
+    font-weight: 700;
+    font-size: rem(30px);
+    line-height: 114.6%;
+    color: #fff;
+}
+
+.main-descrip {
+    font-weight: 400;
+    font-size: rem(20px);
+    line-height: 140%;
+    color: $Main-gray;
+}
+
+.list {
+    font-weight: 400;
+    font-size: rem(20px);
+    line-height: calc(42 / 20 * 100%);
+    color: $Main-gray;
+    list-style-type: circle;
+}
+
+.large-btn {
+    padding: rem(28px) rem(132px);
+    font-weight: 500;
+    font-size: rem(22px);
+    line-height: calc(28 / 22 * 100%);
+    text-transform: capitalize;
+    color: $Main-blue;
+    background-color: $Second-orange;
+    transition: $transition;
+
+    @media (hover) {
+        &:hover {
+            color: #fff;
+            background-color: transparent;
+            outline: rem(1px) solid $Main-orange;
+        }
+    }
+}
+.default-btn {
+    padding: rem(28px) rem(71px);
+    font-weight: 500;
+    font-size: rem(22px);
+    line-height: calc(28 / 22 * 100%);
+    text-transform: capitalize;
+    color: $Main-blue;
+    background-color: $Second-orange;
+    transition: $transition;
+
+    @media (hover) {
+        &:hover {
+            color: #fff;
+            background-color: transparent;
+            outline: rem(1px) solid $Main-orange;
+        }
+    }
+}
+.second-default-btn {
+    padding: rem(28px) rem(47px);
+    font-weight: 500;
+    font-size: rem(22px);
+    line-height: calc(28 / 22 * 100%);
+    color: $Main-blue;
+    background-color: #fff;
+    transition: $transition;
+
+    @media (hover) {
+        &:hover {
+            color: #fff;
+            background-color: transparent;
+            outline: rem(1px) solid $Main-orange;
+        }
+    }
+}
+
+
+.body__meet-partners {
+    padding: rem(120px) 0;
+}
+
+
+.header {
+    display: flex;
+    flex-direction: column;
+    padding-top: rem(39px);
+}
+.consult-section {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: rem(38px);
+}
+.logo-section {
+    display: flex;
+    align-items: center;
+}
+.logo {
+    width: 100%;
+}
+.logo-section-link {
+    display: inline-block;
+    width: rem(56px);
+    margin-right: rem(12px);
+}
+.logo-text {
+    cursor: pointer;
+    font-family: 'Cormorant Garamond', sans-serif;
+    font-weight: 600;
+    font-size: rem(65px);
+    line-height: calc(79 / 65 * 100%);
+    text-transform: capitalize;
+    color: #fff;
+    max-width: rem(330px);
+    transition: $transition;
+    &:hover {
+        color: $Main-orange;
+    }
+}
+
+.cart-section {
+    display: flex;
+    justify-content: space-between;
+
+    @media (max-width: 651px) {
+        position: fixed;
+        bottom: 10px;
+        right: calc(53 / 2 / 650 * 100vw);
+        z-index: 500;
+    }
+}
+.cart-section-logic-holder {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-right: rem(47px);
+
+    @media (max-width: 651px) {
+        margin-right: 1.136364rem;
+    }
+}
+.cart-section-cart-img {
+    width: 100%;
+    height: 100%;
+}
+.cart-section-cart-btn {
+    display: inline-flex;
+    width: rem(32px);
+    height: rem(34px);
+
+    @media (max-width: 651px) {
+        width: 3.554545rem;
+        height: 100%;
+        background-color: $Second-blue;
+        padding: 5px 8px;
+        border-radius: 7%;
+    }
+}
+.cart-section-logic-holder-note {
+    font-size: rem(22px);
+    line-height: calc(28 / 22 * 100%);
+    color: #fff;
+    margin-left: rem(11px);
+
+    @media (max-width: 651px) {
+        position: absolute;
+        top: -3px;
+        right: -3px;
+    }
+
+    & > span {
+        @media (max-width: 651px) {
+            background-color: $Main-orange;
+            padding: 2px 5px;
+            border-radius: 50%;
+        }
+    }
+}
+.header-consult-link {
+    cursor: pointer;
+    padding: rem(28px) rem(45px);
+    background: rgba(255, 255, 255, 0.1);
+    font-size: rem(22px);
+    line-height: calc(28 / 22 * 100%);
+    color: #fff;
+    transition: $transition;
+
+    @media (hover) {
+        &:hover {
+            background-color: $Main-orange;
+            color: $Second-blue;
+        } 
+    }
+    @media (max-width: 651px) {
+        background-color: $Main-orange;
+        color: $Second-blue;
+        border: rem(1px) solid $Main-blue;
+    }
+}
+
+
+.nav-section {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding: rem(32px) 0;
+    border-top: rem(1px) solid #4E555F;
+    border-bottom: rem(1px) solid #4E555F;
+
+    @media (max-width: 781px) {
+        & {
+            flex-direction: row-reverse;
+        }
+    }
+}
+
+
+.header-address-section {
+    display: flex;
+}
+.header-address-section-box {
+    display: flex;
+    margin-left: rem(46px);
+
+    &:first-child {
+        margin: 0;
+    }
+
+    @media (max-width: 651px) {
+        margin-left: 1.090909rem;
+    }
+
+    .header-address-section-image {
+        width: rem(62px);
+        height: rem(62px);
+        margin-right: rem(12px);
+
+        @media (max-width: 501px) {
+            margin: 0;
+        }
+    }
+    .header-address-section-text-box {
+        display: flex;
+        flex-direction: column;
+
+        @media (max-width: 501px) {
+            display: none;
+        }
+
+        .header-address-section-text-box-note { 
+            margin-bottom: rem(2px);
+            font-weight: 500;
+            font-size: rem(18px);
+            line-height: calc(23 / 18 * 100%);
+            text-transform: capitalize;
+            color: $Main-orange;
+        }
+        .header-address-section-text-box-addr {
+            font-size: rem(22px);
+            line-height: calc(28 / 22 * 100%);
+            color: #fff;
+        }
+    }
+}
+
+
+
+.footer {
+    background-color: $Main-blue;
+
+    &__wrapper {
+        padding: rem(139px) 0;
+    }
+
+    &__logo-block {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        overflow: hidden;
+
+        &::after {
+            content: "";
+            display: block;
+            width: calc(456 / 1400 * 100%);
+            height: rem(44px);
+            background: url('https://res.cloudinary.com/ducmdk54f/image/upload/q_auto/v1/Attornyster/nvwjmuz5k8jlel8ze4xw') no-repeat;
+            background-size: 100%;
+            position: absolute;
+            right: 0;
+
+            @media (max-width: 769px) {
+                width: 208px;
+                right: auto;
+                left: 72.357143%;
+            }
+            @media (max-width: 621px) {
+                left: 80.357143%;
+            }
+            @media (max-width: 501px) {
+                left: 86.357143%;
+            }
+            @media (max-width: 381px) {
+                display: none;
+            }
+        }
+        &::before {
+            content: "";
+            display: block;
+            width: calc(456 / 1400 * 100%);
+            height: rem(44px);
+            background: url('https://res.cloudinary.com/ducmdk54f/image/upload/q_auto/v1/Attornyster/fr6lhhmmorrj2ggcgbbw') no-repeat;
+            background-size: 100%;
+            position: absolute;
+            left: 0;
+
+            @media (max-width: 769px) {
+                width: 208px;
+                left: auto;
+                right: 72.357143%;
+            }
+            @media (max-width: 621px) {
+                right: 80.357143%;
+            }
+            @media (max-width: 501px) {
+                right: 86.357143%;
+            }
+            @media (max-width: 381px) {
+                display: none;
+            }
+        }
+        &-link {
+            display: inline-flex;
+
+            &:first-child {
+                margin-right: rem(12px);
+            }
+            & > p {
+                transition: $transition;
+
+                @media (hover) {
+                    &:hover {
+                        color: $Main-orange;
+                    }
+                }
+            }
+        }
+        &-img {
+            width: rem(56px);
+        }
+    }
+
+    &__links-block {
+        display: flex;
+        justify-content: space-between;
+        margin: rem(91px) 0;
+
+        @media (max-width: 769px) {
+            flex-wrap: wrap;
+            padding: 0 calc(150 / 768 * 100%);
+        }
+        @media (max-width: 621px) {
+            padding: 0 12.53125%;
+        }
+        @media (max-width: 501px) {
+            padding: 0 4.53125%;
+        }
+        @media (max-width: 381px) {
+            padding: 0;
+        }
+
+        &-quick {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            width: calc(290 / 1388 * 100%);
+
+            @media (max-width: 769px) {
+                width: 166px;
+            }
+            @media (max-width: 381px) {
+                width: 160px;
+            }
+            .footer__links-block-links-wrapper {
+                flex-direction: row;
+                justify-content: space-between;
+            }
+        }
+
+        &-utility {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            width: calc(195 / 1388 * 100%);
+
+            @media (max-width: 769px) {
+                width: 99px;
+            }
+        }
+
+        &-practise {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            width: 13.527378%;
+
+            @media (max-width: 769px) {
+                width: 99px;
+                order: 5;
+                margin-top: 25px;
+            }
+        }
+
+        &-contact {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            width: calc(326 / 1388 * 100%);
+
+            @media (max-width: 769px) {
+                width: 166px;
+                margin-top: 25px;
+            }
+            @media (max-width: 381px) {
+                width: 160px;
+            }
+        }
+
+        &-address-wrapper {
+            margin-top: rem(33px);
+
+            .footer__links-block-address-physical {
+                display: block;
+                max-width: rem(326px);
+                margin-bottom: rem(43px);
+            }
+        }
+
+        .footer__links-block-link {
+            display: block;
+            margin-top: rem(10px);
+            transition: $transition;
+
+            &:first-child {
+                margin: 0;
+            }
+            @media (hover) {
+                &:hover {
+                    color: $Main-orange;
+                    transform: translateX(rem(-1px));
+                }
+            }
+        }
+
+        &-links-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            width: 100%;
+            margin-top: rem(33px);
+            
+            &-sub-block {
+                display: flex;
+                flex-direction: column;
+                
+                &:first-child {
+                    width: rem(96px);
+                }
+                &:last-child {
+                    width: rem(142px);
+                }
+            }
+        }
+        &-tittle {
+            width: 100%;
+            padding: rem(24px) 0 rem(33px) 0;
+            border-bottom: rem(1px) solid #3A4553;
+            border-top: rem(1px) solid #3A4553;
+        }
+    }
+}
+
+.footer__bottom-section {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: rem(25px) 0;
+    border-top: rem(1px) solid #3A4553;
+    border-bottom: rem(1px) solid #3A4553;
+
+    @media (max-width: 769px) {
+        justify-content: space-between;
+    }
+
+    &-copyright {
+        margin-right: rem(408px);
+
+        @media (max-width: 769px) {
+            margin-right: 0;
+        }
+
+        &-highlight {
+            color: $Main-orange;
+        }
+    }
+    &-socials {
+        display: flex;
+        align-items: center;
+
+        .footer__bottom-section-head-text {
+            color: $Main-orange;
+            margin-right: rem(13px);
+        }
+        &-link {
+            display: inline-flex;
+            width: rem(30px);
+            height: rem(30px);
+            margin-right: rem(26px);
+
+            @media (max-width: 381px) {
+                margin-right: 0.4rem;
+            }
+
+            &:last-child {
+                margin: 0;
+            }
+            &:nth-child(4) {
+                width: rem(30px);
+                height: rem(27px);
+            }
+            &-img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+}
